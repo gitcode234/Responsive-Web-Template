@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- file:///C:/test/port1.html -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="port1.css">
+</head>
+<body>
+
+<header id="hd">
+Web Development and Design
+</header>
+<nav id="navid">
+  <a href="#" id="logo">Luca M.</a>
+  <input type="checkbox" id="check"/>
+  <label for="check" id="checklabel"><span></span></label>
+  <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+  </ul>
+</nav>
+
+<section id="sec">
+<div class="block1" >
+<div id ="x">
+</div>
+<div id ="y">
+</div>
+</div>
+</section>
+
+<div id="parasection">
+<h3>Responsive Web Design</h3>
+<h4> HTML5, CSS3, JavaScript, jQuery, PHP, MySQL</h4>
+
+</div>
+
+<img src="https://cdn.pixabay.com/photo/2012/12/17/19/14/keyboard-70506_960_720.jpg" width="100%"/>
+
+<footer id="ft"><p>LM Web Design, Copyright &copy; 2017</p></footer>
+
+<script>
+var images = [	"https://www.w3schools.com/bootstrap/la.jpg",
+  "https://www.w3schools.com/bootstrap/chicago.jpg",
+  "https://www.w3schools.com/bootstrap/ny.jpg"
+];
+
+var num = 0;
+
+$(function(){
+
+	$("#x").click(function(){   
+ 		num++;
+  	if(num >= images.length){
+  		num = 0;
+  	}
+  $(".block1").css('background', 'url(' +
+  images[num]
+  + ')');
+  $(".block1").css('background-attachment', 'fixed');
+});  
+
+	$("#y").click(function(){   
+ 		num--;
+  	if(num < 0){
+  		num = images.length - 1;
+  	}
+  $(".block1").css('background', 'url(' +
+  images[num]
+  + ')');
+  $(".block1").css('background-attachment', 'fixed');
+});  
+});
+</script>
+</body>
+</html>
